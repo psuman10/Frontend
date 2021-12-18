@@ -1,6 +1,6 @@
 import Slider from "./slider/slider";
-import DefaultLayout from "./pages/components/DefaultLayout"
-
+import DefaultLayout from "./components/DefaultLayout"
+import 'antd/dist/antd.css';
 
 function App() {
     return (
@@ -10,7 +10,7 @@ function App() {
             <Slider/>
             
             </>
-        );
+        ); 
     
 }
 export default App;
