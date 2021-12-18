@@ -32,13 +32,13 @@ export default function Slider() {
     return (
         <div className="container-slider">
             {dataSlider.map((obj, index) => {
-                return (
+                return ( 
                     <div
                     key={obj.id}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                     >
                         <img 
-                        src={process.env.PUBLIC_URL + `/Imgs/car${index + 1}.jpg`} 
+                        src={process.env.PUBLIC_URL + `/Imgs/car${index + 1}.jpg`}alt= ""
                         />
                     </div>
                 )
@@ -48,7 +48,7 @@ export default function Slider() {
 
             <div className="container-dots">
                 {Array.from({length: 5}).map((item, index) => (
-                    <div 
+                    <div key={index}
                     onClick={() => moveDot(index + 1)}
                     className={slideIndex === index + 1 ? "dot active" : "dot"}
                     ></div>
