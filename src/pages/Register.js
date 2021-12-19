@@ -70,7 +70,7 @@ function Register() {
 
             <button className="btn2">Register</button>
             
-          <a className="log"  href="/">Click Here to Login</a>
+          <a className="log"  href="/login">Click Here to Login</a>
           
           
             
