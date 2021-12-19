@@ -57,3 +57,86 @@ h1{
   font-weight: bold;
   color : orangered;
 }
+.login{
+  background-color: black;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+.login label , .login h1{
+  color: white !important;
+}
+.login-form{
+  background-color: #1F1F1F;
+}
+.login-form input{
+  background-color: #333333 !important;
+  border : none !important;
+  color: white;
+  opacity: 0.5;
+}
+.login-logo{
+  position: absolute;
+  left:0;
+  right:0;
+  top: 60%;
+  left: 35%;
+  transform: translateY(-50% , -50%);
+  font-size:45px;
+  opacity: 0.2 !important;
+
+}
+.login a{
+  color: white !important;
+  opacity: 0.5;
+}
+
+.avatar{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left:40%;
+  /* left: calc(40% -50px); */
+}
+
+
+.login label , .login h3{
+  color: white !important;
+  text-align: center;
+}
+
+
+.btn2{
+
+  border:none;
+  outline: none;
+  height: 40px;
+  background-color: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  /* box-shadow: none !important;
+  background-color : white !important;
+  color: orangered !important;
+  border: 1px solid orangered !important;
+  padding: 5px 15px !important;
+  outline: none !important; */
+}
+
+
+.btn2:hover{
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+
+.log{
+  text-decoration: none;
+  font-size: 12px;
+  
+  
+}
+
