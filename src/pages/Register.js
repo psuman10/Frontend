@@ -1,11 +1,13 @@
 import React from "react";
 import { Row, Col, Form, Input } from "antd";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init()
 function Register() {
+  const [typePass, setTypePass] = useState(false);
   
     function onFinish(values) {
            console.log()
@@ -33,10 +35,6 @@ function Register() {
            data-aos-duration='1500'
           src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn0.iconfinder.com%2Fdata%2Ficons%2Fuser-interface-vol-3-12%2F66%2F68-512.png&f=1&nofb=1" />
           <h3>Register</h3>
-
-
-
-           
             <hr />
             <Form.Item
               name="username"
@@ -56,16 +54,29 @@ function Register() {
               name="password"
               label="Password"
               rules={[{ required: true }]}
-
             >
-              <Input placeholder="enter your password" />
+              <Input type= "password" placeholder="enter your password" />
+              
+              
             </Form.Item>
             <Form.Item
               name="cpassword"
               label="Confirm Password" 
               rules={[{ required: true }]}
             >
-              <Input placeholder="enter to confirm password"/>
+              <div className="pass">
+                <Input
+                  type={typePass ? "text" : "password"}
+                  placeholder="enter your password"
+                />
+
+                <span onClick={() => setTypePass(!typePass)}>
+                  <i
+                    class={typePass ? "bi bi-eye-fill" : "bi bi-eye-slash-fill"}
+                  ></i>
+                </span>
+              </div>
+              
             </Form.Item>
 
             <button className="btn2">Register</button>

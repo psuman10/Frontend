@@ -32,9 +32,9 @@ a{
   text-decoration:none !important;
 }
 
-button{
+/* button{
   padding: 3px 10px !important;
-}
+} */
 
 .header .ant-btn{
   box-shadow: none !important;
@@ -139,4 +139,20 @@ h1{
   
   
 }
+.pass{
+  position: relative;
+
+}
+.pass i {
+  color:#fff;
+  position: absolute;
+  top:50%;
+  right:5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+
+
 
