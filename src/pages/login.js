@@ -1,16 +1,15 @@
 import React from "react";
 import { Row, Col, Form, Input } from "antd";
-import { Link } from "react-router-dom";
 import AOS from "aos";
 import { useState } from "react";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+
 AOS.init();
 function Login() {
   const [typePass, setTypePass] = useState(false);
 
   function onFinish(values) {
-    console.log();
+    console.log(values);
   }
 
   return (

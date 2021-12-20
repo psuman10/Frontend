@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Dropdown, Button, Space, Row, Col } from "antd";
+import { Menu, Dropdown, Button, Row, Col } from "antd";
 import { NavLink } from "react-router-dom";
 
 function DefaultLayout(props) {
@@ -17,8 +17,8 @@ function DefaultLayout(props) {
       </Menu.Item>
       <Menu.Item
         onClick={() => {
-          localStorage.removeItem("");
-          window.location.href = "";
+          localStorage.removeItem("user");
+          window.location.href = "/login";
         }}
       >
         <li style={{ color: "orangered" }}>Logout</li>
@@ -45,7 +45,7 @@ function DefaultLayout(props) {
               <Dropdown overlay={menu}>
                 <Button>
                   <i className="fas fa-user"></i>
-                  suman
+                  {user.username}
                 </Button>
               </Dropdown>
             </div>

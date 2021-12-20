@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Form, Input } from "antd";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import {userRegister} from "../redux/actions/userActions"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
@@ -10,7 +10,7 @@ function Register() {
   const [typePass, setTypePass] = useState(false);
   
     function onFinish(values) {
-           console.log()
+           console.log(values)
     }
 
   return (
@@ -72,7 +72,7 @@ function Register() {
 
                 <span onClick={() => setTypePass(!typePass)}>
                   <i
-                    class={typePass ? "bi bi-eye-fill" : "bi bi-eye-slash-fill"}
+                    className={typePass ? "bi bi-eye-fill" : "bi bi-eye-slash-fill"}
                   ></i>
                 </span>
               </div>
