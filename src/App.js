@@ -1,11 +1,11 @@
 import 'antd/dist/antd.css';
 import Register from "./pages/Register";
 import {Route, BrowserRouter, Redirect} from "react-router-dom"
-// import Home from './pages/Home'
 import Home from './pages/Home'
-import NotFound from './pages/NotFound'
+// import NotFound from './pages/NotFound'
 // import ProtectedRoute from 'react-protected-route-component'
 import Login from './pages/login'
+import Profile from "./pages/Profile"
 
 function App() {
     return (
@@ -13,9 +13,10 @@ function App() {
 
             <BrowserRouter>
 
-            <ProtectedRoute path = '/' exact component={Home}/>
+            <Route path = '/' exact component={Home}/>
             <Route path='/login' exact component={Login}/>
             <Route path = '/register' exact component={Register}/>
+            <Route path="/userprofile" exact component={Profile}/>
             {/* <Route exact path="*" component={NotFound} /> */}
 
             </BrowserRouter>

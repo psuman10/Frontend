@@ -1,19 +1,20 @@
 import React from "react";
 import { Menu, Dropdown, Button, Row, Col } from "antd";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+
 
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
   const menu = (
     <Menu>
       <Menu.Item>
-        <a href="/">Home</a>
+       <Link to="/">Home</Link>
       </Menu.Item>
       <Menu.Item>
-        <a href="/userbookings">Bookings</a>
+        <Link to="/userprofile">Profile</Link>
       </Menu.Item>
       <Menu.Item>
-        <a href="/admin">Admin</a>
+        <Link to="/userbookings">Bookings</Link>
       </Menu.Item>
       <Menu.Item
         onClick={() => {
@@ -45,7 +46,7 @@ function DefaultLayout(props) {
               <Dropdown overlay={menu}>
                 <Button>
                   <i className="fas fa-user"></i>
-                  {user.username}
+                  suman
                 </Button>
               </Dropdown>
             </div>
