@@ -1,20 +1,20 @@
 import React from "react";
 import { Menu, Dropdown, Button, Row, Col } from "antd";
-import { NavLink,Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import {UserProfile} from "../pages/Profile"
 
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
   const menu = (
     <Menu>
       <Menu.Item>
-       <Link to="/">Home</Link>
+        <a href="/">Home</a>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/userprofile">Profile</Link>
+        <a href="/UserProfile">Profile</a>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/userbookings">Bookings</Link>
+        <a href="/userbookings">Bookings</a>
       </Menu.Item>
       <Menu.Item
         onClick={() => {

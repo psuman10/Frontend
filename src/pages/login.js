@@ -1,16 +1,19 @@
 import React from "react";
 import { Row, Col, Form, Input } from "antd";
 import AOS from "aos";
+import {useDispatch} from 'react-redux'
 import { useState } from "react";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import {userLogin} from "../redux/actions/userActions"
 
 AOS.init();
 function Login() {
   const [typePass, setTypePass] = useState(false);
-
+  const dispatch = useDispatch()
   function onFinish(values) {
-    console.log(values);
-  }
+    dispatch(userLogin(values))
+           console.log(values)
+    }
 
   return (
     <div className="login">
