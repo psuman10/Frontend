@@ -4,10 +4,10 @@ export default class Profile extends Component {
     render() {
         return (
             <div className="edit_profile">
-           
              <Link className='text-light btn btn-danger btn_close ' to="/">Home</Link>
            
             <form>
+                
                 <div className="info_avatar">
                     <img src="https://picsum.photos/200" 
                     alt="avatar"/>
@@ -48,7 +48,7 @@ export default class Profile extends Component {
                         <option value="other">Other</option>
                     </select>
                 </div>
-                <button className="btn btn-info w-100" type="submit">Save</button>
+                <button className="btn2" type="submit">Save</button>
             </form>
         </div>
         )
