@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux'
 import {userRegister} from "../redux/actions/userActions"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import Spinner from '../components/Spinner'
 // ..
 AOS.init()
 function Register() {
@@ -17,6 +18,7 @@ function Register() {
 
   return (
     <div className="login">
+      {loading && (<Spinner/>)}
       <Row gutter={16} className="d-flex align-items-center">
         <Col lg={16} style={{ position: "relative" }}>
 
@@ -84,9 +86,6 @@ function Register() {
             <button className="btn2">Register</button>
             
           <a className="log"  href="/login">Click Here to Login</a>
-          
-          
-            
           </Form>
         </Col>
       </Row>

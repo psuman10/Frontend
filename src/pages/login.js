@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux'
 import { useState } from "react";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import {userLogin} from "../redux/actions/userActions"
+import Spinner from "../components/Spinner"
 
 AOS.init();
 function Login() {
@@ -17,6 +18,7 @@ function Login() {
 
   return (
     <div className="login">
+      {loading && (<Spinner/>)}
       <Row gutter={16} className="d-flex align-items-center">
         <Col lg={16} style={{ position: "relative" }}>
           <img
