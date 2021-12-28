@@ -6,6 +6,7 @@ import Home from './pages/Home'
 // import ProtectedRoute from 'react-protected-route-component'
 import Login from './pages/login'
 import Profile from "./pages/Profile"
+import Form from 'antd/lib/form/Form';
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
 
             <Route path = '/' exact component={Home}/>
             <Route path='/login' exact component={Login}/>
-            <Route path = '/register' exact component={Register}/>
+            <Route path = '/register' exact><Register  /></Route>
             <Route path="/userprofile" exact component={Profile}/>
             {/* <Route exact path="*" component={NotFound} /> */}
 

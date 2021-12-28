@@ -1,16 +1,17 @@
 import React from "react";
 import { Row, Col, Form, Input } from "antd";
 import AOS from "aos";
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import { useState } from "react";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import {userLogin} from "../redux/actions/userActions"
 import Spinner from "../components/Spinner"
-
+import {Link} from "react-router-dom"
 AOS.init();
 function Login() {
   const [typePass, setTypePass] = useState(false);
   const dispatch = useDispatch()
+  const {loading} = useSelector(state=>state.alertsReducer)
   function onFinish(values) {
     dispatch(userLogin(values))
            console.log(values)
@@ -70,9 +71,9 @@ function Login() {
 
             <button className="btn2">Login</button>
 
-            <a className="log" href="/register">
+            <Link className="log" to="/register">
               Click Here to Register
-            </a>
+            </Link>
           </Form>
         </Col>
       </Row>

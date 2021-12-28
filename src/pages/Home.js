@@ -3,7 +3,7 @@ import Slider from '../slider/slider'
 
 function Home(){
     return(
-        <DefaultLayout>
+        <DefaultLayout >
             <Slider></Slider>
 
 

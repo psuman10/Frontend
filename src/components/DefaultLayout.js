@@ -1,20 +1,19 @@
 import React from "react";
 import { Menu, Dropdown, Button, Row, Col } from "antd";
 import { NavLink } from "react-router-dom";
-import {UserProfile} from "../pages/Profile"
 
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
   const menu = (
     <Menu>
       <Menu.Item>
-        <a href="/">Home</a>
+        <a href="/"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
       </Menu.Item>
       <Menu.Item>
-        <a href="/UserProfile">Profile</a>
+        <a href="/UserProfile"><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
       <Menu.Item>
-        <a href="/userbookings">Bookings</a>
+        <a href="/userbookings"><i className="fa fa-id-card text-dark"></i><span className="ml-2">Bookings</span></a>
       </Menu.Item>
       <Menu.Item
         onClick={() => {
@@ -22,7 +21,7 @@ function DefaultLayout(props) {
           window.location.href = "/login";
         }}
       >
-        <li style={{ color: "orangered" }}>Logout</li>
+        <li style={{ color: "orangered" }}><i className="fa fa-cogs text-dark"></i><span className="ml-2">Logout</span></li>
       </Menu.Item>
     </Menu>
   );
@@ -41,12 +40,18 @@ function DefaultLayout(props) {
                 <b className="suman">
                   <NavLink to="/">Your's Choice </NavLink>
                 </b>
+                {/* <button className="btn3">Contact</button> */}
               </h1>
+              
 
               <Dropdown overlay={menu}>
-                <Button>
+                <Button >
                   <i className="fas fa-user"></i>
-                  suman
+                  
+                  <span className="ml-2">
+                    {/* {user.username} */}
+                    suman
+                    </span>
                 </Button>
               </Dropdown>
             </div>

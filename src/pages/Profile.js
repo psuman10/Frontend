@@ -18,7 +18,10 @@ export default class Profile extends Component {
                     </span>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="username">Username</label>
+                    <label htmlFor="username"style={{
+                        color:"black",
+                        fontWeight:600
+                    }}>Username</label>
                     <div className="position-relative">
                         <input type="text" className="form-control" id="username"
                         name="username" />
@@ -29,16 +32,25 @@ export default class Profile extends Component {
                     </div>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name="email" 
+                    <label htmlFor="email" style={{
+                        color:"black",
+                        fontWeight:600
+                    }}>Email</label>
+                    <input  type="text" name="email" 
                     className="form-control"/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="address">Address</label>
+                    <label htmlFor="address"style={{
+                        color:"black",
+                        fontWeight:600
+                    }}>Address</label>
                     <input type="text" name="address" 
                     className="form-control"/>
                 </div>
-                <label htmlFor="gender">Gender</label>
+                <label htmlFor="gender"style={{
+                        color:"black",
+                        fontWeight:600
+                    }}>Gender</label>
                 <div className="input-group-prepend px-0 mb-4">
                     <select name="gender" id="gender"
                     className="custom-select text-capitalize"
