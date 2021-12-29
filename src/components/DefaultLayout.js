@@ -4,13 +4,14 @@ import { NavLink } from "react-router-dom";
 
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
+  console.log(user)
   const menu = (
     <Menu>
       <Menu.Item>
         <a href="/"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
       </Menu.Item>
       <Menu.Item>
-        <a href="/UserProfile"><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
+        <a href={`/editprofile/${user._id}`}><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
       <Menu.Item>
         <a href="/userbookings"><i className="fa fa-id-card text-dark"></i><span className="ml-2">Bookings</span></a>
