@@ -11,7 +11,7 @@ function DefaultLayout(props) {
         <a href="/"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
       </Menu.Item>
       <Menu.Item>
-        <a href={`/editprofile/${user._id}`}><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
+        <a href="/editprofile"><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
       <Menu.Item>
         <a href="/userbookings"><i className="fa fa-id-card text-dark"></i><span className="ml-2">Bookings</span></a>
@@ -64,4 +64,4 @@ function DefaultLayout(props) {
   );
 }
 
-export default DefaultLayout;
+export default DefaultLayout

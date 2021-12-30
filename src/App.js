@@ -16,10 +16,10 @@ function App() {
 
             <Route path = '/' exact component={Home}/>
             <Route path='/login' exact component={Login}/>
-            <Route path = '/register' exact><Register  /></Route>
-            <Route path="/userprofile/:userid" exact component={Profile}/>
-            <Route path="/editprofile/:userid" exact component={Profile}/>
-            <Route path="/updateprofile/:userid" exact component={Profile}/>
+            <Route path = '/register' exact><Register/></Route>
+            {/* <Route path="/userprofile/:userid" exact component={Profile}/> */}
+            <Route path="/editprofile" exact component={Profile}/>
+            {/* <Route path="/updateprofile/:userid" exact component={Profile}/> */}
 
             {/* <Route exact path="*" component={NotFound} /> */}
 
