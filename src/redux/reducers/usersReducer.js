@@ -18,4 +18,3 @@ export const usersReducer = (state=initialData , action)=>{
      }
 
 }
-

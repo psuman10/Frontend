@@ -1,6 +1,5 @@
 import React from "react";
-import { Form, Input, Menu, Dropdown, Button, Row, Col, Select } from "antd";
-import { useState } from "react";
+import { Form, Input,Row, Col, Select } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { userRegister } from "../redux/actions/userActions";
 import AOS from "aos";
@@ -12,14 +11,13 @@ const { Option } = Select;
 AOS.init();
 function Register(props) {
   console.log(props);
-  const [typePass, setTypePass] = useState(false);
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.alertsReducer);
 
   function onFinish(values) {
     dispatch(userRegister(values));
   }
-  // const [form]=Form.create.useForm()
+  
   return (
     <div className="login">
       {loading && <Spinner />}

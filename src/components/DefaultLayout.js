@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
+
   console.log(user)
   const menu = (
     <Menu>
@@ -11,7 +12,7 @@ function DefaultLayout(props) {
         <a href="/"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
       </Menu.Item>
       <Menu.Item>
-        <a href="/editprofile"><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
+        <a href={`profile/${user._id}`}><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
       <Menu.Item>
         <a href="/userbookings"><i className="fa fa-id-card text-dark"></i><span className="ml-2">Bookings</span></a>
@@ -48,11 +49,7 @@ function DefaultLayout(props) {
               <Dropdown overlay={menu}>
                 <Button >
                   <i className="fas fa-user"></i>
-                  
-                  <span className="ml-2">
-                    {/* {user.username} */}
-                    suman
-                    </span>
+                  {user.username}
                 </Button>
               </Dropdown>
             </div>
