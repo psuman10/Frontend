@@ -52,19 +52,19 @@ export const getAllUsers = () => async (dispatch) => {
 };
 
 export const editUser = (reqObj) => async (dispatch) => {
-  dispatch({ type: "LOADING", payload: true });
-  const user = JSON.parse(localStorage.getItem("user"));
-
-  try {
-    const response = await axios.put("/api/users/editusers", reqObj);
-    localStorage.setItem("user", JSON.stringify(response.data));
-    dispatch({ type: "LOADING", payload: false });
-    message.success("User details updated successfully");
-     setTimeout(() => {
-        window.location.href=`${user._id}`
-     }, 500);
-  } catch (error) {
-    console.log(error);
-    dispatch({ type: "LOADING", payload: false });
-  }
-};
+    dispatch({ type: "LOADING", payload: true });
+    const user = JSON.parse(localStorage.getItem("user"));
+  
+    try {
+      const response = await axios.put("/api/users/editusers", reqObj);
+      localStorage.setItem("user", JSON.stringify(response.data));
+      dispatch({ type: "LOADING", payload: false });
+      message.success("User details updated successfully");
+       setTimeout(() => {
+          window.location.href=`${user._id}`
+       }, 500);
+    } catch (error) {
+      console.log(error);
+      dispatch({ type: "LOADING", payload: false });
+    }
+  };
