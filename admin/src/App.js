@@ -1,6 +1,7 @@
 import {Route} from 'react-router-dom'
 // import ProtectedRoute from 'react-protected-route-component'
-import Home from '../src/pages/Home'
+import Home from '../src/pages/Home';
+import 'antd/dist/antd.css';
 
 function App() {
   return (

@@ -15,18 +15,18 @@ export const Navbar = () => {
                 <div className="navbar-collapse collapse" id="collapsingNavbar">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link className="nav-link" to="/">Home <span className="sr-only">Home</span></Link>
+                            <Link className="nav-link" to="/"><span className="sr-only">Home</span></Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link" href="http://localhost:3001/" target="_blank" rel="noreferrer">Link</a>
-                        </li>   
+                        </li>    */}
                     </ul>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link className="nav-link" to="/" data-target="#myModal" data-toggle="modal">Profile</Link>
                         </li>
-                        <li className="nav-item">
-                </li>
+                        {/* <li className="nav-item"> */}
+                {/* </li> */}
                     </ul>
                 </div>
        </nav>
