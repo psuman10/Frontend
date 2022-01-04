@@ -36,26 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.header {
-  margin: 4% 2%;
-  text-align: center;
-}
-
-.bgvi {
-  background-color:rgb(97, 50, 205);
-  color: aliceblue;
-}
-
-.even {
-  background-color: yellowgreen;
-}
-
-.right {
-  text-align: right;
-}
-
-.center {
-  text-align: center;
-}
-
