@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
 
-  console.log(user)
+
   const menu = (
     <Menu>
       <Menu.Item>
