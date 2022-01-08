@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 
 const Sidebar = () => {
     return (
-        
          <div className="col-md-3 col-lg-2 sidebar-offcanvas pl-0" id="sidebar" role="navigation" style={{backgroundColor:"#241e46"}}>
           
             <ul className="nav flex-column sticky-top pl-0 pt-5 p-3 mt-3 ">
