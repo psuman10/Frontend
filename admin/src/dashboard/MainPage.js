@@ -64,7 +64,7 @@ const Dashboard = () => {
           </div>
         </Link>
 
-        <Link to="/" className="col-xl-3 col-sm-6 py-2">
+        <Link to="/Users" className="col-xl-3 col-sm-6 py-2">
           <div className="card text-white bg-info h-100">
             <div className="card-body bg-primary">
               <div className="rotate">
