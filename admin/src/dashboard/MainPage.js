@@ -21,74 +21,81 @@ const Dashboard = () => {
       </nav>
 
       <div className="row mb-3">
-        <Link to="/" className="col-xl-3 col-sm-6 py-2">
-          <div className="text-white h-100">
-            <div
-              className="card-body bg-success"
-            >
-              <div className="rotate">
-                <i className="fa fa-retweet fa-4x"></i>
-              </div>
-              <h6 className="text-uppercase">Booking Details</h6>
-              
-            </div>
-          </div>
-        </Link>
-
-        <Link to="/" className="col-xl-3 col-sm-6 py-2">
-          <div className="text-white h-100">
-            <div
-              className="card-body bg-dark"
-              
-            >
-              <div className="rotate">
-                <i className="fas fa-car fa-4x"></i>
-              </div>
-              <h6 className="text-uppercase">Total Cars</h6>
-             
-            </div>
-          </div>
-        </Link>
-
-        <Link to="/" className="col-xl-3 col-sm-6 py-2">
-          <div className="card bg-danger text-white h-100">
-            <div
-              className="card-body bg-danger"
-            >
-              <div className="rotate">
-                <i className="fa fa-window-close fa-4x"></i>
-              </div>
-              <h6 className="text-uppercase">Add Cars</h6>
-              
-            </div>
-          </div>
-        </Link>
-
-        <Link to="/Users" className="col-xl-3 col-sm-6 py-2">
-          <div className="card text-white bg-info h-100">
+        <Link to="/Users" className="col-xl-3 col-sm-6 py-1">
+          <div className="text-white bg-primary h-100">
             <div className="card-body bg-primary">
               <div className="rotate">
                 <i className="fas fa-users fa-4x"></i>
               </div>
-
               <h6 className="text-uppercase">Users</h6>
+            </div>
+          </div>
+        </Link>
+
+        <Link to="/" className="col-xl-3 col-sm-6 py-1">
+          <div className="text-white h-100">
+            <div className="card-body bg-success">
+              <div className="rotate">
+                <i className="fas fa-plus-circle fa-4x"></i>
+              </div>
+              <h6 className="text-uppercase">Add Cars</h6>
+            </div>
+          </div>
+        </Link>
+       
+
+        <Link to="/" className="col-xl-3 col-sm-6 py-1">
+          <div className="text-white h-100">
+            <div className="card-body bg-dark">
+              <div className="rotate">
+                <i className="fas fa-car fa-4x"></i>
+              </div>
+              <h6 className="text-uppercase">Total Cars</h6>
+            </div>
+          </div>
+        </Link>
+
+        <Link to="/" className="col-xl-3 col-sm-6 py-1">
+          <div className="text-white h-100">
+            <div className="card-body bg-danger">
+              <div className="rotate">
+                <i className="fa fa-retweet fa-4x"></i>
+              </div>
+              <h6 className="text-uppercase">Bookings</h6>
+              {/* <h1 className="text-uppercase">55</h1> */}
             </div>
           </div>
         </Link>
       </div>
 
-      <hr/>
-
+      <hr />
+      <nav aria-label="breadcrumb">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
+            <Link
+              to="/"
+              style={{
+                color: "orangered",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
+            >
+              Booking Details
+            </Link>
+          </li>
+        </ol>
+      </nav>
       <div className="row">
         <div className="col-lg-12 col-md-6 col-sm-12">
           <div className="table-responsive">
             <table className="table table-striped">
               <thead>
                 <tr>
-                <th>S.No</th>
-                  <th>UserName</th>
-                  <th>Email ID</th>
-                  <th>Phone Number</th>
+                  <th>S.No</th>
+                  <th>Order ID </th>
+                  <th>Car</th>
+                  <th>Booking Date</th>
+                  <th>Total</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -97,8 +104,6 @@ const Dashboard = () => {
         </div>
         <hr />
       </div>
-
-      
     </div>
   );
 };
