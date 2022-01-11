@@ -1,4 +1,4 @@
-import 'antd/dist/antd.css';
+
 import Register from "./pages/Register";
 import {Route, BrowserRouter, Redirect} from "react-router-dom"
 import Home from './pages/Home'

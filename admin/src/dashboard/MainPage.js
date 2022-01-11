@@ -21,7 +21,7 @@ const Dashboard = () => {
       </nav>
 
       <div className="row mb-3">
-        <Link to="/Users" className="col-xl-3 col-sm-6 py-1">
+        <Link to="/usersdetails" className="col-xl-3 col-sm-6 py-1">
           <div className="text-white bg-primary h-100">
             <div className="card-body bg-primary">
               <div className="rotate">

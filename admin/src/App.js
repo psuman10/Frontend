@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "../src/pages/Home";
-import "antd/dist/antd.css";
 import Users from "./pages/Users";
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/users" exact component={Users} />
+        <Route path="/usersdetails" exact component={Users} />
       </Switch>
     </BrowserRouter>
   );

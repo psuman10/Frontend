@@ -1,7 +1,15 @@
 import Navbar from "../dashboard/Navbar";
-import Sidebar from "../dashboard/Sidebar";
+import { useEffect} from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllUsers} from "../redux/actions/userActions";
+
 const Dashboard = () => {
+  const dispatch = useDispatch();
+  const { users } = useSelector((state) => state.usersReducer);
+  useEffect(() => {
+    dispatch(getAllUsers());
+  }, []);
   return (
     <>
       <Navbar />
@@ -36,6 +44,46 @@ const Dashboard = () => {
                     <th>Phone Number</th>
                     <th>Action</th>
                   </tr>
+                  {users.map((user, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{user.username}</td>
+
+                      <td>{user.email}</td>
+                      <td>Driver</td>
+                      <td>
+                        <ul class="list-inline m-0">
+                          <li class="list-inline-item">
+                            <button
+                              class="btn btn-primary btn-sm rounded-0"
+                              type="button"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Add"
+                            >
+                              <i class="fa fa-table"></i>
+                            </button>
+                          </li>
+
+                          <li class="list-inline-item">
+                            <Link to={`/editusers/${user._id}`}>
+                              <button
+                                class="btn btn-success btn-sm rounded-0"
+                                type="button"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Edit"
+                              >
+                                <i class="fa fa-edit"></i>
+                              </button>
+                            </Link>
+                          </li>
+                          
+                        </ul>
+                      </td>
+                    </tr>
+                  );
+                })}
                 </thead>
               </table>
             </div>
