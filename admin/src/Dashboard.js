@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
+
 const Dashboard = () => {
+
   return (
     <div className="col main pt-5 mt-3">
       <nav aria-label="breadcrumb">
@@ -21,7 +23,7 @@ const Dashboard = () => {
       </nav>
 
       <div className="row mb-3">
-        <Link to="/usersdetails" className="col-xl-3 col-sm-6 py-1">
+        <Link to="/userdetails" className="col-xl-3 col-sm-6 py-1">
           <div className="text-white bg-primary h-100">
             <div className="card-body bg-primary">
               <div className="rotate">
@@ -42,7 +44,6 @@ const Dashboard = () => {
             </div>
           </div>
         </Link>
-       
 
         <Link to="/" className="col-xl-3 col-sm-6 py-1">
           <div className="text-white h-100">

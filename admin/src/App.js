@@ -1,16 +1,32 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "../src/pages/Home";
-import Users from "./pages/Users";
+import {Route,Switch, BrowserRouter} from 'react-router-dom'
+import Home from './pages/Home'
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/usersdetails" exact component={Users} />
-      </Switch>
-    </BrowserRouter>
-  );
-}
+import 'antd/dist/antd.css';
 
-export default App;
+
+import EditUser from './pages/EditUser';
+
+import UserDetails from './pages/UserDetails'
+
+function App(){
+
+        return (
+                <BrowserRouter>
+             <Switch>
+             <Route path='/' exact component={Home} />
+
+
+             <Route path='/userdetails' exact component={UserDetails} />
+             <Route path='/editusers/:userid' exact component={EditUser} />
+         </Switch>
+         </BrowserRouter>
+                
+        );
+    }
+ 
+export default App
+
+
+
+
+

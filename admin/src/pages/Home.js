@@ -1,6 +1,6 @@
-import Navbar from '../dashboard/Navbar'
-import MainPage from '../dashboard/MainPage'
-import Sidebar from '../dashboard/Sidebar'
+import Dashboard from '../Dashboard'
+import Sidebar from '../Sidebar'
+import Navbar from '../Navbar'
 function Home() {
     return (
         
@@ -8,14 +8,14 @@ function Home() {
         <Navbar/>
         <div className="container-fluid" id="main">
          <div className="row row-offcanvas row-offcanvas-left">
-            <Sidebar/>
-             <MainPage/>
-             
-             
-             </div> 
-
-     </div> 
-     </div>      
+           <Sidebar/>
+          <Dashboard/>
+       
+     </div>
+    </div>  
+</div>  
+            
     )
 }
+
 export default Home
