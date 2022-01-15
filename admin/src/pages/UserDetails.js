@@ -40,17 +40,17 @@ const Dashboard = () => {
                   <tr>
                     <th>UserName</th>
                     <th>Email</th>
-                    <th>Phone Number</th>
-
+                    <th>Gender</th>
+                    <th>Address</th>
                     <th>Action</th>
                   </tr>
                   {users.map((user, index) => {
                     return (
                       <tr key={index}>
                         <td>{user.username}</td>
-
                         <td>{user.email}</td>
-                        <td>Driver</td>
+                        <td>{user.gender}</td>
+                        <td>{user.address}</td>
                         <td>
                           <ul class="list-inline m-0">
                             <li class="list-inline-item">
@@ -96,17 +96,6 @@ const Dashboard = () => {
                                 <i class="fa fa-trash"></i>
                               </button>
                             </Popconfirm>
-                            {/* <li class="list-inline-item">
-                            <button
-                              class="btn btn-danger btn-sm rounded-0"
-                              type="button"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Delete"
-                            >
-                              <i class="fa fa-trash"></i>
-                            </button>
-                          </li> */}
                           </ul>
                         </td>
                       </tr>
