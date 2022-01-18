@@ -32,7 +32,7 @@ const Dashboard = () => {
           </div>
         </Link>
 
-        <Link to="/" className="col-xl-3 col-sm-6 py-1">
+        <Link to="/addcar" className="col-xl-3 col-sm-6 py-1">
           <div className="text-white h-100">
             <div className="card-body bg-success">
               <div className="rotate">
