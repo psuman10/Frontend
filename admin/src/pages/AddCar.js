@@ -3,7 +3,6 @@ import React from 'react'
 import { useDispatch} from 'react-redux'
 import { addCar } from '../redux/actions/carsActions'
 
-
 function AddCar() {
 
     const dispatch = useDispatch()
