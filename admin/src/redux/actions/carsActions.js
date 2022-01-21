@@ -11,7 +11,7 @@ export const addCar=(reqObj)=>async dispatch=>{
          dispatch({type: 'LOADING' , payload:false})
          message.success('New car added successfully')
          setTimeout(() => {
-            window.location.href='/admin'
+            window.location.href='/'
          }, 500);
     } catch (error) {
         console.log(error)

@@ -53,18 +53,7 @@ const Dashboard = () => {
                         <td>{user.address}</td>
                         <td>
                           <ul class="list-inline m-0">
-                            <li class="list-inline-item">
-                              <button
-                                class="btn btn-primary btn-sm rounded-0"
-                                type="button"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Add"
-                              >
-                                <i class="fa fa-table"></i>
-                              </button>
-                            </li>
-
+                          
                             <li class="list-inline-item">
                               <Link to={`/editusers/${user._id}`}>
                                 <button

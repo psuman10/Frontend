@@ -1,7 +1,8 @@
 import { Col , Row , Form , Input} from 'antd'
 import React from 'react'
 import { useDispatch} from 'react-redux'
-import { addCar } from '../redux/actions/carsActions'
+import { addCar } from '../redux/actions/carsActions';
+import Navbar from '../Navbar'
 
 function AddCar() {
 
@@ -9,13 +10,12 @@ function AddCar() {
 
     function onFinish(values){
 
-         values.bookedTimeSlots=[]
-
-         dispatch(addCar(values))
-        
+         dispatch(addCar(values))  
     }
 
     return (
+
+        <> <Navbar/>
        
                <Row justify='center ' style={{marginTop:"80px"}}>
                    <Col lg={12} sm={24} xs={24} className='p-2'>
@@ -46,7 +46,7 @@ function AddCar() {
                    </Col>
                </Row>
 
-            
+            </>
     )
 }
 
