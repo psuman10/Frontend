@@ -20,6 +20,7 @@ export default function Profile() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(editUser(userData));
+    
   };
 
   const { users } = useSelector((state) => state.usersReducer);
@@ -29,6 +30,7 @@ export default function Profile() {
 //     if(o._id===user._id) console.log("hello")
    
     
+
 // }
 // )
  

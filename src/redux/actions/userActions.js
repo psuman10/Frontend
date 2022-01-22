@@ -9,6 +9,7 @@ export const userLogin = (reqObj) => async (dispatch) => {
     const response = await axios.post("/api/users/login", reqObj);
     localStorage.setItem("user", JSON.stringify(response.data));
     message.success("Login success");
+    alert(response.data.msg)
     dispatch({ type: "LOADING", payload: false });
     setTimeout(() => {
       window.location.href = "/";

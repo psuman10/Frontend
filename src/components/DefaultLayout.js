@@ -4,20 +4,17 @@ import { NavLink } from "react-router-dom";
 
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem("user"));
-
-
   const menu = (
     <Menu>
       <Menu.Item>
-        <a href="/"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
+        <a href="/home"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
       </Menu.Item>
       <Menu.Item>
-        <a href="profile/"
-        
+        <a href="profile/" 
         ><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
       <Menu.Item>
-        <a href="/userbookings"><i className="fa fa-id-card text-dark"></i><span className="ml-2">Bookings</span></a>
+        <NavLink to="/userbookings"><i className="fa fa-id-card text-dark"></i><span className="ml-2">Bookings</span></NavLink>
       </Menu.Item>
       <Menu.Item
         onClick={() => {
@@ -25,7 +22,7 @@ function DefaultLayout(props) {
           window.location.href = "/login";
         }}
       >
-        <li style={{ color: "orangered" }}><i className="fa fa-cogs text-dark"></i><span className="ml-2">Logout</span></li>
+        {/* <li style={{ color: "orangered" }}><i className="fa fa-cogs text-dark"/><span className="ml-2">Logout</span></li> */}
       </Menu.Item>
     </Menu>
   );
@@ -44,7 +41,6 @@ function DefaultLayout(props) {
                 <b className="suman">
                   <NavLink to="/">Your's Choice </NavLink>
                 </b>
-                {/* <button className="btn3">Contact</button> */}
               </h1>
               
 
