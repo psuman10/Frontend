@@ -246,7 +246,6 @@ h1{
 .car{
   border-radius: 5px;
   margin-top: 100px;
-  height: 160px;
   transition: 0.3s;
 }
 .car:hover{
@@ -273,12 +272,13 @@ h1{
 
 .cards {
   padding: 4rem;
-  background: #fff;
+  background: rgb(245, 6, 6);
 }
 
-h1 {
+/* h1 {
   text-align: center;
-}
+  background-color: red;
+} */
 
 .cards__container {
   display: flex;
@@ -287,6 +287,7 @@ h1 {
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
+  background-color: #fb2525;
 }
 
 .cards__wrapper {
@@ -372,7 +373,7 @@ h1 {
   line-height: 24px;
 }
 
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;
   }
@@ -388,7 +389,7 @@ h1 {
   .cards__item {
     margin-bottom: 2rem;
   }
-}
+} */
 
 
 .letter{
@@ -414,7 +415,7 @@ p{
   border: 1px solid orangered !important;
   padding: 5px 15px !important;
   outline: none !important;
-}
+} 
 
 
 /* //////////DATE//////////////////// */
@@ -423,4 +424,6 @@ p{
   background-color: tomato;
 
 }
+
+
 

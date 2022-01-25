@@ -39,7 +39,7 @@ function DefaultLayout(props) {
                   alt="logo"
                 />
                 <b className="suman">
-                  <NavLink to="/">Your's Choice </NavLink>
+                  <NavLink to="/">Your Choice </NavLink>
                 </b>
               </h1>
               
