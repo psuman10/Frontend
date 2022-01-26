@@ -13,16 +13,13 @@ function DefaultLayout(props) {
         <a href="profile/" 
         ><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
-      <Menu.Item>
-        <NavLink to="/userbookings"><i className="fa fa-id-card text-dark"></i><span className="ml-2">Bookings</span></NavLink>
-      </Menu.Item>
       <Menu.Item
         onClick={() => {
           localStorage.removeItem("user");
           window.location.href = "/login";
         }}
       >
-        {/* <li style={{ color: "orangered" }}><i className="fa fa-cogs text-dark"/><span className="ml-2">Logout</span></li> */}
+        <li style={{ color: "orangered" }}><i className="fa fa-cogs text-dark"/><span className="ml-2">Logout</span></li>
       </Menu.Item>
     </Menu>
   );
