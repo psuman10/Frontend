@@ -97,7 +97,7 @@ function Home() {
                                     </div>
 
                                     <div>
-                                        <button className="btn1 mr-2 letter"><Link to="/">Book Now</Link></button>
+                                        <button className="btn1 mr-2 letter"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
                                     </div>
 
                                </div>
