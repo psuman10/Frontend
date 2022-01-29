@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import { alertsReducer } from './reducers/alertsReducer';
 import {usersReducer} from './reducers/usersReducer';
 import {carsReducer} from './reducers/carsReducer'
+import {bookingsReducer} from './reducers/bookingsReducer'
 
 
 
@@ -12,6 +13,8 @@ const rootReducer = combineReducers({
     alertsReducer,
     usersReducer,
     carsReducer,
+    bookingsReducer,
+
     
  })
 
