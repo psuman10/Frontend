@@ -4,6 +4,8 @@ import {Route, BrowserRouter, Redirect} from "react-router-dom"
 import Home from './pages/Home'
 import Login from './pages/login'
 import Profile from "./pages/Profile"
+import BookingCar from './pages/BookingCar'
+
 
 function App() {
     return (
@@ -14,6 +16,8 @@ function App() {
             <Route path='/login' exact component={Login}/>
             <Route path = '/register' exact><Register/></Route>
             <Route path='/profile/:userid' exact component={Profile} />
+            <Route path='/booking/:carid' exact component={BookingCar} />
+
 
 
             </BrowserRouter>

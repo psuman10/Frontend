@@ -1,19 +1,17 @@
 import { Col, Row, Divider, DatePicker, Checkbox, Modal } from "antd";
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import DefaultLayout from "../Layout/DefaultLayout";
+import DefaultLayout from "../components/DefaultLayout";
 
-import { getAllCars } from "../../../redux/actions/carsActions";
+import { getAllCars } from "../redux/actions/carsActions";
 import moment from "moment";
-import { bookCar } from "../redux/actions/";
+import { bookCar } from "../redux/actions/bookingActions";
 import StripeCheckout from "react-stripe-checkout";
-// import AOS from 'aos';
 
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 const { RangePicker } = DatePicker;
 function BookingCar({ match }) {
   const { cars } = useSelector((state) => state.carsReducer);
-  const { loading } = useSelector((state) => state.alertsReducer);
   const [car, setcar] = useState({});
   const dispatch = useDispatch();
   const [from, setFrom] = useState();
@@ -150,14 +148,14 @@ function BookingCar({ match }) {
             title="Booked time slots"
           >
             <div className="p-2">
-              {car.bookedTimeSlots.map((slot) => {
+              {/* {car.bookedTimeSlots.map((slot) => {
                 console.log(slot)
                 return (
                   <button className="btn1 mt-2">
                     {slot.from} - {slot.to}
                   </button>
                 );
-              })}
+              })} */}
 
               <div className="text-right mt-5">
                 <button
