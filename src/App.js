@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Login from './pages/login'
 import Profile from "./pages/Profile"
 import BookingCar from './pages/BookingCar'
+import UserBookings from './pages/UserBookings'
 
 
 function App() {
@@ -17,9 +18,7 @@ function App() {
             <Route path = '/register' exact><Register/></Route>
             <Route path='/profile/:userid' exact component={Profile} />
             <Route path='/booking/:carid' exact component={BookingCar} />
-
-
-
+            <Route path='/userbookings' exact component={UserBookings} />
             </BrowserRouter>
 
             </div>
