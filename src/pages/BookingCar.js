@@ -13,6 +13,7 @@ const { RangePicker } = DatePicker;
 function BookingCar({ match }) {
   const { cars } = useSelector((state) => state.carsReducer);
   const [car, setcar] = useState({});
+  console.log(car)
   const dispatch = useDispatch();
   const [from, setFrom] = useState();
   const [to, setTo] = useState();
@@ -148,14 +149,14 @@ function BookingCar({ match }) {
             title="Booked time slots"
           >
             <div className="p-2">
-              {/* {car.bookedTimeSlots.map((slot) => {
-                console.log(slot)
+              {car.bookedTimeSlots.map((slot) => {
+              
                 return (
                   <button className="btn1 mt-2">
                     {slot.from} - {slot.to}
                   </button>
                 );
-              })} */}
+              })}
 
               <div className="text-right mt-5">
                 <button

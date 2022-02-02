@@ -1,5 +1,4 @@
 import React, {useEffect } from "react";
-import DefaultLayout from "../components/DefaultLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllBookings, cancelBooking } from "../redux/actions/bookingActions";
 import { Col, Row } from "antd";
@@ -7,10 +6,10 @@ import {Link} from "react-router-dom"
 import moment from "moment";
 import { DeleteOutlined} from "@ant-design/icons";
 import { Popconfirm} from "antd";
+import Navbar from '../Navbar'
 function UserBookings() {
   const dispatch = useDispatch();
   const { bookings } = useSelector((state) => state.bookingsReducer);
-  const {loading} = useSelector((state) => state.alertsReducer);
   const user = JSON.parse(localStorage.getItem("user"));
   console.log(user)
   useEffect(() => {
@@ -18,7 +17,7 @@ function UserBookings() {
   }, []);
 
   return (
-    <DefaultLayout>
+    <Navbar>  <Navbar />
       <h3 className="text-center mt-2">My Bookings</h3>
     
       <Row justify="center" gutter={16}>
@@ -64,7 +63,7 @@ function UserBookings() {
           
         </Col>
       </Row>
-    </DefaultLayout>
+    </Navbar>
   );
 }
 

@@ -36,3 +36,25 @@ export const getAllBookings=()=>async dispatch=>{
 
 }
 
+
+
+
+export const cancelBooking=(reqObj)=>async dispatch=>{
+
+  dispatch({type: 'LOADING' , payload:true})
+
+  try {
+       await axios.post('/api/bookings/cancelbooking' , reqObj)
+     
+       dispatch({type: 'LOADING' , payload:false})
+       message.success('Booking has been cancelled successfully')
+       setTimeout(() => {
+          window.location.reload()
+       }, 500);
+  } catch (error) {
+      console.log(error)
+      dispatch({type: 'LOADING' , payload:false})
+  }
+    
+
+}

@@ -54,14 +54,14 @@ const Dashboard = () => {
           </div>
         </Link>
 
-        <Link to="/" className="col-xl-3 col-sm-6 py-1">
+        <Link to="/usersbookings" className="col-xl-3 col-sm-6 py-1">
           <div className="text-white h-100">
             <div className="card-body bg-danger">
               <div className="rotate">
                 <i className="fa fa-retweet fa-4x"></i>
               </div>
               <h6 className="text-uppercase">Bookings</h6>
-              {/* <h1 className="text-uppercase">55</h1> */}
+             
             </div>
           </div>
         </Link>

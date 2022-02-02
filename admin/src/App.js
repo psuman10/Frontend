@@ -2,6 +2,8 @@ import {Route,Switch, BrowserRouter} from 'react-router-dom'
 import Home from './pages/Home'
 import AddCar from './pages/AddCar';
 import TotalCars from './pages/TotalCars';
+import UserBookings from './pages/UserBookings';
+
 
 import 'antd/dist/antd.css';
 
@@ -22,6 +24,7 @@ function App(){
              <Route path='/editusers/:userid' exact component={EditUser} />
              <Route path='/addcar' exact component={AddCar} />
              <Route path='/totalavailable' exact component={TotalCars} />
+             <Route path='/usersbookings' exact component={UserBookings} />
          </Switch>
          </BrowserRouter>
                 
