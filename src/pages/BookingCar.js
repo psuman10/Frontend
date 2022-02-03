@@ -13,7 +13,6 @@ const { RangePicker } = DatePicker;
 function BookingCar({ match }) {
   const { cars } = useSelector((state) => state.carsReducer);
   const [car, setcar] = useState({});
-  console.log(car)
   const dispatch = useDispatch();
   const [from, setFrom] = useState();
   const [to, setTo] = useState();
@@ -127,7 +126,7 @@ function BookingCar({ match }) {
               <StripeCheckout
                 shippingAddress
                 token={onToken}
-                currency='inr'
+                currency='INR'
                 amount={totalAmount * 100}
                 stripeKey="pk_test_51IYnC0SIR2AbPxU0TMStZwFUoaDZle9yXVygpVIzg36LdpO8aSG8B9j2C0AikiQw2YyCI8n4faFYQI5uG3Nk5EGQ00lCfjXYvZ"
               >
