@@ -20,7 +20,7 @@
 //   }, [users]);
 
 //   function onFinish(values) {
-//     console.log(values)
+
 //     values._id = user._id;
 
 //     dispatch(editUser(values));
@@ -122,10 +122,10 @@ export default function Profile() {
   };
 
   const { users } = useSelector((state) => state.usersReducer);
-// console.log(users)
+
 
 // users.map((o) => {
-//     if(o._id===user._id) console.log("hello")
+//     if(o._id===user._id) 
    
     
 // }

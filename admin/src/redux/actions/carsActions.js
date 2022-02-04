@@ -1,6 +1,21 @@
 import { message } from 'antd';
 import axios from 'axios';
 
+export const getAllCars=()=>async dispatch=>{
+
+    dispatch({type: 'LOADING' , payload:true})
+
+    try {
+        const response = await axios.get('/api/cars/getallcars')
+        dispatch({type: 'GET_ALL_CARS', payload:response.data})
+        dispatch({type: 'LOADING' , payload:false})
+    } catch (error) {
+        console.log(error)
+        dispatch({type: 'LOADING' , payload:false})
+    }
+
+}
+
 export const addCar=(reqObj)=>async dispatch=>{
 
     dispatch({type: 'LOADING' , payload:true})
@@ -21,19 +36,22 @@ export const addCar=(reqObj)=>async dispatch=>{
 
 }
 
-
-
-export const getAllCars=()=>async dispatch=>{
+export const editCar=(reqObj)=>async dispatch=>{
 
     dispatch({type: 'LOADING' , payload:true})
 
     try {
-        const response = await axios.get('/api/cars/getallcars')
-        dispatch({type: 'GET_ALL_CARS', payload:response.data})
-        dispatch({type: 'LOADING' , payload:false})
+         await axios.put('/api/cars/editcar' , reqObj)
+       
+         dispatch({type: 'LOADING' , payload:false})
+         message.success('Car details updated successfully')
+         setTimeout(() => {
+            window.location.href='/'
+         }, 500);
     } catch (error) {
         console.log(error)
         dispatch({type: 'LOADING' , payload:false})
     }
+      
 
 }

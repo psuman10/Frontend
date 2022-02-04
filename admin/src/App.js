@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import AddCar from './pages/AddCar';
 import TotalCars from './pages/TotalCars';
 import UserBookings from './pages/UserBookings';
+import EditCar from './pages/EditCar';
 
 
 import 'antd/dist/antd.css';
@@ -24,7 +25,8 @@ function App(){
              <Route path='/editusers/:userid' exact component={EditUser} />
              <Route path='/addcar' exact component={AddCar} />
              <Route path='/totalavailable' exact component={TotalCars} />
-             <Route path='/usersbookings' exact component={UserBookings} />
+             <Route path='/editcar/:carid' exact component={EditCar} />
+             <Route path='/userbookings' exact component={UserBookings} />
          </Switch>
          </BrowserRouter>
                 

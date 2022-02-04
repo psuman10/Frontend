@@ -11,13 +11,13 @@ function UserBookings() {
   const dispatch = useDispatch();
   const { bookings } = useSelector((state) => state.bookingsReducer);
   const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user)
   useEffect(() => {
     dispatch(getAllBookings());
   }, []);
 
   return (
-    <Navbar>  <Navbar />
+    <>
+    <Navbar />
       <h3 className="text-center mt-2">My Bookings</h3>
     
       <Row justify="center" gutter={16}>
@@ -63,7 +63,7 @@ function UserBookings() {
           
         </Col>
       </Row>
-    </Navbar>
+      </>
   );
 }
 

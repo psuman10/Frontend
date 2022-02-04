@@ -54,7 +54,7 @@ const Dashboard = () => {
           </div>
         </Link>
 
-        <Link to="/usersbookings" className="col-xl-3 col-sm-6 py-1">
+        <Link to="/userbookings" className="col-xl-3 col-sm-6 py-1">
           <div className="text-white h-100">
             <div className="card-body bg-danger">
               <div className="rotate">

@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteCar, getAllCars } from "../redux/actions/carsActions";
+import {getAllCars } from "../redux/actions/carsActions";
 
 import { Col, Row} from "antd";
 import { Link } from "react-router-dom";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import { Popconfirm } from "antd";
+import {EditOutlined } from "@ant-design/icons";
 import Navbar from "../Navbar"
 function TotalCars() {
   const { cars } = useSelector((state) => state.carsReducer);
-  console.log(cars)
   const [totalCars, setTotalcars] = useState([]);
   const dispatch = useDispatch();
 
