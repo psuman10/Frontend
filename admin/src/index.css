@@ -190,7 +190,7 @@ a{
   height: 100%;
   z-index: 9;
   overflow: auto;
-  background-image: url("C:/Users/sp554/OneDrive/Desktop/profile.jpg");
+  /* background-image: url("C:/Users/sp554/OneDrive/Desktop/profile.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
 }

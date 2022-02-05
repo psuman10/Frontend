@@ -26,7 +26,7 @@ export const addCar=(reqObj)=>async dispatch=>{
          dispatch({type: 'LOADING' , payload:false})
          message.success('New car added successfully')
          setTimeout(() => {
-            window.location.href='/'
+            window.location.href='/admin'
          }, 500);
     } catch (error) {
         console.log(error)
@@ -46,7 +46,28 @@ export const editCar=(reqObj)=>async dispatch=>{
          dispatch({type: 'LOADING' , payload:false})
          message.success('Car details updated successfully')
          setTimeout(() => {
-            window.location.href='/'
+            window.location.href='/admin'
+         }, 500);
+    } catch (error) {
+        console.log(error)
+        dispatch({type: 'LOADING' , payload:false})
+    }
+      
+
+}
+
+export const deleteCar=(reqObj)=>async dispatch=>{
+
+    dispatch({type: 'LOADING' , payload:true}) 
+
+    try {
+         await axios.delete(`/api/cars/deletecar/${reqObj.carid}`)
+         console.log(reqObj.carid)
+       
+         dispatch({type: 'LOADING' , payload:false})
+         message.success('Car deleted successfully')
+         setTimeout(() => {
+            window.location.reload()
          }, 500);
     } catch (error) {
         console.log(error)

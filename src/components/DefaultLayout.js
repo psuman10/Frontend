@@ -13,6 +13,9 @@ function DefaultLayout(props) {
         <a href="profile/" 
         ><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
+      <Menu.Item>
+        <a href="/userbookings" ><i className="fa fa-book text-dark"></i><span className="ml-2">Bookings</span></a>
+      </Menu.Item>
       <Menu.Item
         onClick={() => {
           localStorage.removeItem("user");

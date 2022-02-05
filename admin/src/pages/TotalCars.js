@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {getAllCars } from "../redux/actions/carsActions";
+import {getAllCars, deleteCar } from "../redux/actions/carsActions";
 
 import { Col, Row} from "antd";
 import { Link } from "react-router-dom";
-import {EditOutlined } from "@ant-design/icons";
+import {EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import Navbar from "../Navbar"
+import { Popconfirm} from "antd";
 function TotalCars() {
   const { cars } = useSelector((state) => state.carsReducer);
   const [totalCars, setTotalcars] = useState([]);
@@ -44,7 +45,7 @@ function TotalCars() {
                       />
                     </Link>
 
-                    {/* <Popconfirm
+                    <Popconfirm
                       title="Are you sure to delete this car?"
                       onConfirm={()=>{dispatch(deleteCar({carid : car._id}))}}
                       
@@ -54,7 +55,7 @@ function TotalCars() {
                       <DeleteOutlined
                         style={{ color: "red", cursor: "pointer" }}
                       />
-                    </Popconfirm> */}
+                    </Popconfirm>
                   </div>
                 </div>
               </div>
