@@ -3,26 +3,26 @@ import { Menu, Dropdown, Button, Row, Col } from "antd";
 import { NavLink } from "react-router-dom";
 
 function DefaultLayout(props) {
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user=JSON.parse(localStorage.getItem("user")).user
+
   const menu = (
     <Menu>
-      <Menu.Item>
-        <a href="/home"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
+      <Menu.Item key='1'>
+        <a href="/"><i className="fa fa-home text-dark"></i><span className="ml-2">Home</span></a>
       </Menu.Item>
-      <Menu.Item>
-        <a href="profile/" 
-        ><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
+      <Menu.Item key='2'>
+      <a href={`profile/${user._id}`}><i className="fa fa-user-md text-dark"></i><span className="ml-2">Profile</span></a>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key='3'>
         <a href="/userbookings" ><i className="fa fa-book text-dark"></i><span className="ml-2">Bookings</span></a>
       </Menu.Item>
-      <Menu.Item
+      <Menu.Item key='4'
         onClick={() => {
           localStorage.removeItem("user");
           window.location.href = "/login";
         }}
       >
-        <li style={{ color: "orangered" }}><i className="fa fa-cogs text-dark"/><span className="ml-2">Logout</span></li>
+          <p style={{ color: "orangered" }}><i className="fa fa-cogs text-dark"/><span className="ml-2">Logout</span></p>
       </Menu.Item>
     </Menu>
   );
@@ -47,7 +47,7 @@ function DefaultLayout(props) {
               <Dropdown overlay={menu}>
                 <Button >
                   <i className="fas fa-user"></i>
-                  {/* {user.username} */}
+                  {user.username}
                 </Button>
               </Dropdown>
             </div>

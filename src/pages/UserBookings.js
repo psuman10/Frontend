@@ -18,7 +18,7 @@ function UserBookings() {
 
   return (
     <DefaultLayout>
-      <h3 className="text-center mt-2">My Bookings</h3>
+      <h4 className="text-center mt-2">My Bookings</h4>
     
       <Row justify="center" gutter={16}>
         <Col lg={16} sm={24}>
@@ -42,7 +42,7 @@ function UserBookings() {
                 <Col lg={6} sm={24} className='text-right'>
                     <img style={{borderRadius:5}} src={booking.car.image}  height="140" className="p-2"/>
                 </Col>
-                <Link to="/" className="btn2 mt-2 mb-3 ml-3"> 
+                <Link to="/" className="btn3"> 
                 <Popconfirm
                       title="Are you sure to delete this car?"
                       onConfirm={()=>{dispatch(cancelBooking({bookingid : booking._id}))}}
@@ -52,7 +52,7 @@ function UserBookings() {
                     >
                       Cancel Booking
                       <DeleteOutlined
-                        style={{ color: "red", cursor: "pointer" }}
+                        style={{ color: "black", cursor: "pointer" }}
                       />
                     </Popconfirm>
                     </Link>

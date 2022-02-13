@@ -1,5 +1,7 @@
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import { message } from "antd";
+
 
 export const userLogin = (reqObj) => async (dispatch) => {
     
@@ -57,7 +59,8 @@ export const editUser = (reqObj) => async (dispatch) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
   try {
-    const response = await axios.put("/api/users/editusers", reqObj);
+    const {id}=useParams()
+    const response = await axios.put("/api/users/editusers"+id, reqObj);
     localStorage.setItem("user", JSON.stringify(response.data));
     dispatch({ type: "LOADING", payload: false });
     message.success("User details updated successfully");
@@ -65,7 +68,7 @@ export const editUser = (reqObj) => async (dispatch) => {
         window.location.href=`${user._id}`
      }, 500);
   } catch (error) {
-    console.log(error);
+    console.log(error); 
     dispatch({ type: "LOADING", payload: false });
   }
 };

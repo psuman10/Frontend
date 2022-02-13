@@ -4,7 +4,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { editUser,getAllUsers } from "../redux/actions/userActions";
 
 export default function Profile() {
-    const user = JSON.parse(localStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user")).user
 
   const initialState = {
     username: "",
@@ -24,25 +24,8 @@ export default function Profile() {
   };
 
   const { users } = useSelector((state) => state.usersReducer);
-// console.log(users)
-
-// users.map((o) => {
-//     if(o._id===user._id) console.log("hello")
-   
-    
-
-// }
-// )
- 
   useEffect(() => {
-    
     setUserData(user)
-       
-        
-   
-      
-   
-  
   }, []);
 
 
@@ -55,10 +38,6 @@ dispatch(getAllUsers())
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
-
-//    useEffect(() => {
-//     setUserData();
-//    }, []);
 
   
   return (

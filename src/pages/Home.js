@@ -34,7 +34,7 @@ function Home() {
 
         for(var car of cars){
 
-              if(car.bookedTimeSlots.length == 0){
+              if(car.bookedTimeSlots.length === 0){
                   temp.push(car)
               }
               else{

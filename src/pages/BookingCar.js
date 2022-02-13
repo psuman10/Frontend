@@ -22,10 +22,10 @@ function BookingCar({ match }) {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    if (cars.length == 0) {
+    if (cars.length === 0) {
       dispatch(getAllCars());
     } else {
-      setcar(cars.find((o) => o._id == match.params.carid));
+      setcar(cars.find((o) => o._id === match.params.carid));
     }
   }, [cars]);
 
@@ -126,9 +126,9 @@ function BookingCar({ match }) {
               <StripeCheckout
                 shippingAddress
                 token={onToken}
-                currency='INR'
+                currency='AUD'
                 amount={totalAmount * 100}
-                stripeKey="pk_test_51IYnC0SIR2AbPxU0TMStZwFUoaDZle9yXVygpVIzg36LdpO8aSG8B9j2C0AikiQw2YyCI8n4faFYQI5uG3Nk5EGQ00lCfjXYvZ"
+                stripeKey="pk_test_51KODU8H1DycL4QJ3unJxI9pFNsDEUmDrpabyjPqEdyntRegQh8UaVryG6k1Isr9MfWeK2ZIi9zAjyYiFJozLnvhP00CW7VTF4d"
               >
                   <button className="btn1">
                 Book Now
